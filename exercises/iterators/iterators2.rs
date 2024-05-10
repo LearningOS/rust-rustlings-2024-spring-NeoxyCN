@@ -6,7 +6,6 @@
 // Execute `rustlings hint iterators2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 // Step 1.
 // Complete the `capitalize_first` function.
@@ -16,9 +15,9 @@ pub fn capitalize_first(input: &str) -> String {
     match c.next() {
         None => String::new(),
         Some(first) => {
-            let mut c = first.to_uppercase().to_string();
-            c.push_str(c.as_str());
-            c
+            let mut capitalized = first.to_uppercase().to_string();  // 转换第一个字符为大写
+            capitalized.push_str(c.as_str());  // 添加剩余字符
+            capitalized
         },
     }
 }
